@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inipponflex - Biohacking & Nanotecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">inippon<span class="logo-gold">flex</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. HERO Section -->
+    <section id="hero" class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ BIOHACKING JAPONÉS</div>
+            <h1 class="hero-title">
+                Tu cuerpo no está fallando…
+                <span class="hero-highlight">está saturado.</span>
+            </h1>
+            <p class="hero-subtitle">Optimiza tu salud desde la raíz con nanotecnología avanzada</p>
+            <div class="hero-buttons">
+                <button class="btn btn-glow btn-primary" onclick="scrollToSection('tech')">
+                    <span class="btn-icon">🔬</span>
+                    Descubre cómo funciona
+                </button>
+                <button class="btn btn-glow btn-whatsapp" onclick="openWhatsApp('Quiero optimizar mi salud')">
+                    <span class="btn-icon">💚</span>
+                    Quiero optimizar mi salud
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Vidas transformadas</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Países</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label">Años de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Desliza para explorar</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 2. ¿QUÉ ES BIOHACKING? -->
+    <section id="biohacking" class="section biohacking-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">CONOCIMIENTO</div>
+                <h2 class="section-title">¿Qué es Biohacking?</h2>
+                <p class="section-subtitle">Optimizar tu cuerpo naturalmente</p>
+            </div>
+            <div class="biohacking-content">
+                <div class="problems-grid">
+                    <div class="problem-card" style="--delay: 0.1s">
+                        <div class="problem-icon-wrapper">
+                            <div class="problem-icon">📡</div>
+                        </div>
+                        <h3>Radiación</h3>
+                    </div>
+                    <div class="problem-card" style="--delay: 0.2s">
+                        <div class="problem-icon-wrapper">
+                            <div class="problem-icon">😰</div>
+                        </div>
+                        <h3>Estrés</h3>
+                    </div>
+                    <div class="problem-card" style="--delay: 0.3s">
+                        <div class="problem-icon-wrapper">
+                            <div class="problem-icon">🏭</div>
+                        </div>
+                        <h3>Contaminación</h3>
+                    </div>
+                    <div class="problem-card" style="--delay: 0.4s">
+                        <div class="problem-icon-wrapper">
+                            <div class="problem-icon">🔥</div>
+                        </div>
+                        <h3>Inflamación</h3>
+                    </div>
+                    <div class="problem-card" style="--delay: 0.5s">
+                        <div class="problem-icon-wrapper">
+                            <div class="problem-icon">🩸</div>
+                        </div>
+                        <h3>Mala circulación</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TECNOLOGÍAS -->
+    <section id="tech" class="section tech-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">TECNOLOGÍA</div>
+                <h2 class="section-title">4 Pilares de la Salud</h2>
+                <p class="section-subtitle">El corazón de nuestra innovación</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card" data-tech="fire" style="--delay: 0.1s">
+                    <div class="tech-decoration"></div>
+                    <div class="tech-icon-wrapper">
+                        <div class="tech-icon">🔥</div>
+                    </div>
+                    <h3>FIR (Infrarrojo lejano)</h3>
+                    <h4 class="tech-element">"Fuego"</h4>
+                    <ul class="tech-features">
+                        <li><span class="checkmark">✓</span> Penetra profundamente en el cuerpo</li>
+                        <li><span class="checkmark">✓</span> Mejora la circulación</li>
+                        <li><span class="checkmark">✓</span> Reduce inflamación</li>
+                        <li><span class="checkmark">✓</span> Ayuda a desintoxicar</li>
+                    </ul>
+                </div>
+                <div class="tech-card" data-tech="air" style="--delay: 0.2s">
+                    <div class="tech-decoration"></div>
+                    <div class="tech-icon-wrapper">
+                        <div class="tech-icon">🌬️</div>
+                    </div>
+                    <h3>Iones negativos</h3>
+                    <h4 class="tech-element">"Aire"</h4>
+                    <ul class="tech-features">
+                        <li><span class="checkmark">✓</span> Neutralizan radiación</li>
+                        <li><span class="checkmark">✓</span> Mejoran el estado de ánimo</li>
+                        <li><span class="checkmark">✓</span> Aumentan oxigenación</li>
+                    </ul>
+                </div>
+                <div class="tech-card" data-tech="earth" style="--delay: 0.3s">
+                    <div class="tech-decoration"></div>
+                    <div class="tech-icon-wrapper">
+                        <div class="tech-icon">🧲</div>
+                    </div>
+                    <h3>Magnetoterapia</h3>
+                    <h4 class="tech-element">"Tierra"</h4>
+                    <ul class="tech-features">
+                        <li><span class="checkmark">✓</span> Mejora flujo sanguíneo</li>
+                        <li><span class="checkmark">✓</span> Regula sistema nervioso</li>
+                        <li><span class="checkmark">✓</span> Disminuye dolor</li>
+                    </ul>
+                </div>
+                <div class="tech-card" data-tech="water" style="--delay: 0.4s">
+                    <div class="tech-decoration"></div>
+                    <div class="tech-icon-wrapper">
+                        <div class="tech-icon">💧</div>
+                    </div>
+                    <h3>Agua estructurada</h3>
+                    <h4 class="tech-element">"Agua"</h4>
+                    <ul class="tech-features">
+                        <li><span class="checkmark">✓</span> Mejora hidratación celular</li>
+                        <li><span class="checkmark">✓</span> Facilita absorción de nutrientes</li>
+                        <li><span class="checkmark">✓</span> Apoya desintoxicación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMPARATIVO -->
+    <section id="comparison" class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">TRANSFORMACIÓN</div>
+                <h2 class="section-title">Antes vs Después</h2>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-col comparison-bad">
+                    <div class="comparison-icon">❌</div>
+                    <h3>Sin tecnología</h3>
+                    <ul class="comparison-list">
+                        <li><span class="comparison-bullet">•</span> Fatiga constante</li>
+                        <li><span class="comparison-bullet">•</span> Dolores crónicos</li>
+                        <li><span class="comparison-bullet">•</span> Estrés acumulado</li>
+                        <li><span class="comparison-bullet">•</span> Mala circulación</li>
+                        <li><span class="comparison-bullet">•</span> Sueño de mala calidad</li>
+                    </ul>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="comparison-col comparison-good">
+                    <div class="comparison-icon">✅</div>
+                    <h3>Con nanotecnología</h3>
+                    <ul class="comparison-list">
+                        <li><span class="comparison-bullet">•</span> Energía renovada</li>
+                        <li><span class="comparison-bullet">•</span> Recuperación acelerada</li>
+                        <li><span class="comparison-bullet">•</span> Equilibrio emocional</li>
+                        <li><span class="comparison-bullet">•</span> Bienestar total</li>
+                        <li><span class="comparison-bullet">•</span> Sueño reparador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. EL CREADOR -->
+    <section id="creator" class="section creator-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">HERENCIA</div>
+                <h2 class="section-title">El Creador</h2>
+            </div>
+            <div class="creator-content">
+                <div class="creator-image-wrapper">
+                    <div class="creator-image-ring"></div>
+                    <div class="creator-image">
+                        <div class="image-placeholder">👨‍🔬</div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <h3 class="creator-name">Toshokuro</h3>
+                    <div class="creator-title">Maestro en Nanotecnología</div>
+                    <div class="creator-bio">
+                        <p>Filosofía japonesa combinada con la más avanzada tecnología.</p>
+                        <p>Inspiración directa de la naturaleza y sus principios de equilibrio.</p>
+                    </div>
+                    <div class="creator-stats">
+                        <div class="creator-stat">
+                            <div class="creator-stat-number">15</div>
+                            <div class="creator-stat-label">Patentes</div>
+                        </div>
+                        <div class="creator-stat">
+                            <div class="creator-stat-number">30</div>
+                            <div class="creator-stat-label">Años de experiencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PATENTES Y CERTIFICACIONES -->
+    <section id="certifications" class="section certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">RESPALDO</div>
+                <h2 class="section-title">Certificaciones Internacionales</h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card" style="--delay: 0.1s">
+                    <div class="cert-icon">🏆</div>
+                    <h3>ISO 9001</h3>
+                    <p>Calidad internacional</p>
+                </div>
+                <div class="cert-card" style="--delay: 0.2s">
+                    <div class="cert-icon">⚕️</div>
+                    <h3>Certificaciones Médicas</h3>
+                    <p>Aprobado por expertos</p>
+                </div>
+                <div class="cert-card" style="--delay: 0.3s">
+                    <div class="cert-icon">🔬</div>
+                    <h3>Investigación Científica</h3>
+                    <p>Estudios clínicos</p>
+                </div>
+                <div class="cert-card" style="--delay: 0.4s">
+                    <div class="cert-icon">🌿</div>
+                    <h3>100% Natural</h3>
+                    <p>Sin químicos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRODUCTOS -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">CATÁLOGO</div>
+                <h2 class="section-title">Nuestros Productos</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" style="--delay: 0.1s">
+                    <div class="product-badge">MÁS VENDIDO</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-image">📦</div>
+                    </div>
+                    <h3 class="product-name">Kit Básico</h3>
+                    <p class="product-desc">Comienza tu transformación</p>
+                    <ul class="product-features">
+                        <li>✓ Tecnología FIR</li>
+                        <li>✓ Iones negativos</li>
+                        <li>✓ Magnetoterapia</li>
+                    </ul>
+                    <button class="btn btn-glow btn-primary" onclick="openWhatsApp('quiero información sobre Kit básico')">
+                        Solicitar información
+                    </button>
+                </div>
+                <div class="product-card" style="--delay: 0.2s">
+                    <div class="product-image-wrapper">
+                        <div class="product-image">🛏️</div>
+                    </div>
+                    <h3 class="product-name">Almohadas Premium</h3>
+                    <p class="product-desc">Sueño reparador todas las noches</p>
+                    <ul class="product-features">
+                        <li>✓ Nanopartículas</li>
+                        <li>✓ Temperatura regulada</li>
+                        <li>✓ Máxima comodidad</li>
+                    </ul>
+                    <button class="btn btn-glow btn-primary" onclick="openWhatsApp('quiero información sobre Almohadas')">
+                        Solicitar información
+                    </button>
+                </div>
+                <div class="product-card" style="--delay: 0.3s">
+                    <div class="product-badge">NUEVO</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-image">📱</div>
+                    </div>
+                    <h3 class="product-name">Dispositivos Portátiles</h3>
+                    <p class="product-desc">Protección donde quiera que vayas</p>
+                    <ul class="product-features">
+                        <li>✓ Fácil de usar</li>
+                        <li>✓ Efecto inmediato</li>
+                        <li>✓ Diseño elegante</li>
+                    </ul>
+                    <button class="btn btn-glow btn-primary" onclick="openWhatsApp('quiero información sobre Dispositivos')">
+                        Solicitar información
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIOS -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">EXPERIENCIAS</div>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" style="--delay: 0.1s">
+                    <div class="testimonial-quotes">"</div>
+                    <div class="testimonial-content">
+                        ¡Es increíble! Después de un mes de uso, me siento con más energía que nunca. El dolor de espalda que tenía desde hace años ha disminuido considerablemente.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <div class="author-name">María González</div>
+                            <div class="author-role">Cliente feliz</div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="testimonial-card" style="--delay: 0.2s">
+                    <div class="testimonial-quotes">"</div>
+                    <div class="testimonial-content">
+                        No creía que funcionara, pero decidí probarlo. Ahora duermo muchísimo mejor y me despierto renovado. ¡Totalmente recomendado!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <div class="author-name">Juan Pérez</div>
+                            <div class="author-role">Cliente feliz</div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="testimonial-card" style="--delay: 0.3s">
+                    <div class="testimonial-quotes">"</div>
+                    <div class="testimonial-content">
+                        La inversión valió cada centavo. Mi salud ha mejorado drásticamente y me siento 10 años más joven. ¡Gracias inipponflex!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <div class="author-name">Carlos Rodríguez</div>
+                            <div class="author-role">Cliente feliz</div>
+                        </div>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVITACIÓN A TERAPIA GRATUITA -->
+    <section id="invitation" class="section invitation-section">
+        <div class="container">
+            <div class="invitation-wrapper">
+                <div class="invitation-envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-inner">
+                        <div class="invitation-sparkles">✨</div>
+                        <h3 class="invitation-title">Tienes una invitación especial…</h3>
+                        <p class="invitation-text">
+                            No tienes que creer en esto… <strong>tienes que sentirlo.</strong>
+                        </p>
+                        <p class="invitation-text">
+                            Te invitamos a vivir una experiencia única donde tu cuerpo podrá comenzar a equilibrarse, relajarse y activar su verdadero potencial.
+                        </p>
+                        <p class="invitation-highlight">
+                            <span class="highlight-icon">🎁</span>
+                            Sin costo. Sin compromiso.
+                        </p>
+                        <p class="invitation-text">
+                            Solo una oportunidad para que experimentes el cambio por ti mismo.
+                        </p>
+                        <button class="btn btn-glow btn-whatsapp btn-lg" onclick="openWhatsApp('vi la invitación para la terapia gratuita y quiero agendar mi sesión')">
+                            <span class="btn-icon">💚</span>
+                            Agendar mi terapia gratuita
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">PREGUNTAS</div>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" style="--delay: 0.1s">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">¿Quién puede usar esta tecnología?</span>
+                        <span class="faq-icon">
+                            <span class="faq-icon-plus"></span>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Casi cualquier persona puede beneficiarse de estas tecnologías. Son completamente naturales y no tienen efectos secundarios. Desde jóvenes hasta adultos mayores pueden experimentar los beneficios.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="--delay: 0.2s">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">¿Es compatible con tratamientos médicos?</span>
+                        <span class="faq-icon">
+                            <span class="faq-icon-plus"></span>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, es completamente complementario a cualquier tratamiento médico. Nuestros productos no interfieren con medicamentos ni terapias convencionales. Siempre recomendamos consultar con tu médico si tienes dudas específicas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="--delay: 0.3s">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">¿Cuánto tiempo se tarda en ver resultados?</span>
+                        <span class="faq-icon">
+                            <span class="faq-icon-plus"></span>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los resultados varían según cada persona. Algunos clientes sienten mejoría desde los primeros días, mientras que para otros puede tomar de 2 a 4 semanas. Lo importante es ser constante en el uso.</p>
+                    </div>
+                </div>
+                <div class="faq-item" style="--delay: 0.4s">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">¿Tiene efectos secundarios?</span>
+                        <span class="faq-icon">
+                            <span class="faq-icon-plus"></span>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, nuestra tecnología es 100% natural y no tiene efectos secundarios negativos. Trabaja con los procesos naturales del cuerpo para ayudarlo a equilibrarse y sanar por sí mismo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. OPORTUNIDAD DE NEGOCIO -->
+    <section id="business" class="section business-section">
+        <div class="container">
+            <div class="business-wrapper">
+                <div class="business-content">
+                    <div class="section-badge">OPORTUNIDAD</div>
+                    <h2 class="section-title">Transforma vidas… y la tuya también</h2>
+                    <p class="business-subtitle">Únete a nuestra misión de llevar salud y bienestar al mundo</p>
+                    <div class="business-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-text">Ingresos ilimitados</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📈</div>
+                            <div class="benefit-text">Crecimiento personal</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌍</div>
+                            <div class="benefit-text">Impacto global</div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎓</div>
+                            <div class="benefit-text">Capacitación gratuita</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-glow btn-primary btn-lg" onclick="openWhatsApp('quiero trabajar con ustedes')">
+                        <span class="btn-icon">🚀</span>
+                        Quiero ser parte del equipo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CTA FINAL -->
+    <section id="final-cta" class="section final-cta">
+        <div class="container">
+            <div class="final-cta-wrapper">
+                <div class="final-cta-glow"></div>
+                <h2 class="final-cta-title">Tu cuerpo puede sanar…</h2>
+                <h3 class="final-cta-subtitle">si le das lo correcto.</h3>
+                <p class="final-cta-text">El primer paso hacia tu transformación es un clic de distancia</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-glow btn-whatsapp btn-lg" onclick="openWhatsApp('')">
+                        <span class="btn-icon">💚</span>
+                        WhatsApp
+                    </button>
+                    <button class="btn btn-glow btn-primary btn-lg" onclick="openWhatsApp('quiero agendar una cita')">
+                        <span class="btn-icon">📅</span>
+                        Agendar cita
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    inippon<span class="logo-gold">flex</span>
+                </div>
+                <p class="footer-text">© 2024 inipponflex. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
