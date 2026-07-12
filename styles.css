@@ -229,18 +229,20 @@ body::before {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray-300) 100%);
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-blue) 50%, var(--color-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-gray-400);
+    font-size: 1.3rem;
+    color: var(--color-gray-300);
     max-width: 600px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
 /* ===== HERO SECTION ===== */
@@ -546,9 +548,13 @@ body::before {
 }
 
 .problem-card h3 {
-    font-size: 1.1rem;
-    color: var(--color-gray-200);
-    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-white);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ===== TECH GRID ===== */
