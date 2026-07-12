@@ -41,22 +41,22 @@ function createParticle(container) {
     const particle = document.createElement('div');
     particle.className = 'particle';
     
-    const size = Math.random() * 4 + 2;
+    const size = Math.random() * 6 + 3;
     const left = Math.random() * 100;
-    const duration = Math.random() * 20 + 10;
-    const delay = Math.random() * 20;
+    const duration = Math.random() * 15 + 8;
+    const delay = Math.random() * 15;
     
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     particle.style.left = `${left}%`;
     particle.style.animation = `float ${duration}s ${delay}s infinite`;
-    particle.style.opacity = Math.random() * 0.5 + 0.2;
+    particle.style.opacity = Math.random() * 0.6 + 0.3;
     
-    // Colores aleatorios entre azul, dorado y morado
-    const colors = ['#00d4ff', '#ffd700', '#8b5cf6', '#00ff88'];
+    // Colores más brillantes y variados
+    const colors = ['#00d4ff', '#ffd700', '#8b5cf6', '#00ff88', '#ff6699', '#66ffcc'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     particle.style.background = randomColor;
-    particle.style.boxShadow = `0 0 ${size * 2}px ${randomColor}`;
+    particle.style.boxShadow = `0 0 ${size * 3}px ${randomColor}, 0 0 ${size * 6}px ${randomColor}40`;
     
     container.appendChild(particle);
 }
@@ -137,13 +137,13 @@ function initNavbar() {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(5, 5, 8, 0.95)';
+            navbar.style.background = 'rgba(10, 22, 40, 0.95)';
             navbar.style.backdropFilter = 'blur(20px)';
             scrollIndicator.style.opacity = '0';
             scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
             scrollIndicator.style.pointerEvents = 'none';
         } else {
-            navbar.style.background = 'rgba(5, 5, 8, 0.8)';
+            navbar.style.background = 'rgba(10, 22, 40, 0.8)';
             scrollIndicator.style.opacity = '1';
             scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
             scrollIndicator.style.pointerEvents = 'auto';
@@ -233,18 +233,23 @@ document.addEventListener('DOMContentLoaded', function() {
 const style = document.createElement('style');
 style.textContent = `
     @keyframes float {
-        0%, 100% {
-            transform: translateY(100vh) translateX(0);
+        0% {
+            transform: translateY(100vh) translateX(0px);
             opacity: 0;
         }
         10% {
-            opacity: 0.5;
-        }
-        90% {
-            opacity: 0.5;
+            opacity: 0.7;
         }
         50% {
-            transform: translateY(-100px) translateX(20px);
+            transform: translateY(50vh) translateX(15px);
+            opacity: 0.9;
+        }
+        90% {
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(-100px) translateX(-10px);
+            opacity: 0;
         }
     }
 `;
