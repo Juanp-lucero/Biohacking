@@ -116,7 +116,7 @@ function initScrollAnimations() {
     }, observerOptions);
     
     // Observar todas las secciones y elementos
-    const animateElements = document.querySelectorAll('.problem-card, .tech-card, .cert-card, .product-card, .testimonial-card, .faq-item, .benefit-item');
+    const animateElements = document.querySelectorAll('.problem-card, .tech-card, .cert-card, .product-card, .testimonial-card, .faq-item, .benefit-item, .video-wrapper');
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
