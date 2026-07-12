@@ -549,6 +549,12 @@ body::before {
     font-size: 2.5rem;
 }
 
+.radiation-icon {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 15px rgba(255,215,0,0.6));
+}
+
 .problem-card h3 {
     font-size: 1.25rem;
     color: var(--color-white);
