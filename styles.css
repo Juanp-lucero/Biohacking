@@ -212,37 +212,39 @@ body::before {
 
 .section-badge {
     display: inline-block;
-    padding: 8px 24px;
-    background: var(--gradient-glass);
-    border: 1px solid rgba(255,215,0,0.3);
+    padding: 12px 32px;
+    background: linear-gradient(135deg, rgba(255,68,68,0.2), rgba(255,215,0,0.2));
+    border: 2px solid rgba(255,68,68,0.5);
     border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-gold);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-red);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 30px rgba(255,68,68,0.3);
 }
 
 .section-title {
     font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-blue) 50%, var(--color-gold) 100%);
+    background: linear-gradient(135deg, var(--color-red) 0%, var(--color-gold) 50%, var(--color-red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
-    text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+    text-shadow: 0 0 60px rgba(255, 68, 68, 0.5);
+    letter-spacing: 2px;
 }
 
 .section-subtitle {
-    font-size: 1.3rem;
-    color: var(--color-gray-300);
+    font-size: 1.4rem;
+    color: var(--color-gray-200);
     max-width: 600px;
     margin: 0 auto;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* ===== HERO SECTION ===== */
