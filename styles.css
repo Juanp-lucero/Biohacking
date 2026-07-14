@@ -230,21 +230,22 @@ body::before {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--color-red) 0%, var(--color-gold) 50%, var(--color-red) 100%);
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-blue) 50%, var(--color-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
-    text-shadow: 0 0 60px rgba(255, 68, 68, 0.5);
-    letter-spacing: 2px;
+    text-shadow: 0 0 60px rgba(0, 212, 255, 0.5);
+    letter-spacing: 1px;
 }
 
 .section-subtitle {
     font-size: 1.4rem;
-    color: var(--color-gray-200);
+    color: var(--color-white);
     max-width: 600px;
     margin: 0 auto;
     font-weight: 600;
+    text-shadow: 0 0 30px rgba(255,255,255,0.3);
 }
 
 /* ===== HERO SECTION ===== */
