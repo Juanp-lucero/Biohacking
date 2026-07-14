@@ -869,6 +869,50 @@ body::before {
     color: var(--color-green);
 }
 
+.comparison-videos {
+    margin-top: 56px;
+}
+
+.comparison-videos-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.comparison-videos-badge {
+    margin-bottom: 18px;
+}
+
+.comparison-videos-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1.25;
+    color: var(--color-white);
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.16);
+}
+
+.comparison-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.comparison-video-card {
+    background: linear-gradient(180deg, rgba(8,18,38,0.95) 0%, rgba(16,27,52,0.9) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 14px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.32);
+    backdrop-filter: blur(12px);
+}
+
+.comparison-video {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    background: #020817;
+    box-shadow: 0 0 28px rgba(0, 212, 255, 0.08);
+}
+
 /* ===== CREATOR SECTION ===== */
 .creator-content {
     display: flex;
