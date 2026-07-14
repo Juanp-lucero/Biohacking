@@ -534,8 +534,8 @@ body::before {
 }
 
 .problem-icon-wrapper {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     background: linear-gradient(135deg, rgba(255,0,0,0.1), rgba(255,100,0,0.1));
     border-radius: 20px;
     display: flex;
@@ -546,18 +546,23 @@ body::before {
 }
 
 .problem-icon {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .radiation-icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     filter: drop-shadow(0 0 15px rgba(255,215,0,0.6));
 }
 
 .stress-icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     filter: drop-shadow(0 0 15px rgba(255,68,68,0.7));
     animation: pulse-stress 2s ease-in-out infinite;
 }
@@ -567,6 +572,7 @@ body::before {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
 }
 
 @keyframes pulse-stress {
