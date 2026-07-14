@@ -1076,6 +1076,96 @@ body::before {
     font-size: 1.05rem;
 }
 
+.downloads-panel {
+    margin-top: 42px;
+    padding: 32px;
+    background: linear-gradient(180deg, rgba(8,18,38,0.94) 0%, rgba(16,27,52,0.88) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 28px;
+    box-shadow: 0 20px 44px rgba(0,0,0,0.24);
+}
+
+.downloads-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.downloads-badge {
+    margin-bottom: 16px;
+}
+
+.downloads-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-white);
+    text-shadow: 0 0 18px rgba(255,255,255,0.1);
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.download-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    text-decoration: none;
+    transition: var(--transition-normal);
+    color: var(--color-white);
+}
+
+.download-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-gold);
+    box-shadow: 0 18px 36px rgba(255,215,0,0.14);
+}
+
+.download-icon {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    box-shadow: 0 0 24px rgba(239,68,68,0.24);
+}
+
+.download-info {
+    flex: 1;
+}
+
+.download-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    color: var(--color-white);
+}
+
+.download-info p {
+    color: var(--color-gray-200);
+    font-size: 0.98rem;
+}
+
+.download-action {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--color-gold) 0%, #f59e0b 100%);
+    color: var(--color-black);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
 /* ===== PRODUCTS ===== */
 .products-grid {
     display: grid;
