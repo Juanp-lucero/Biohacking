@@ -555,6 +555,18 @@ body::before {
     filter: drop-shadow(0 0 15px rgba(255,215,0,0.6));
 }
 
+.stress-icon {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 15px rgba(255,68,68,0.7));
+    animation: pulse-stress 2s ease-in-out infinite;
+}
+
+@keyframes pulse-stress {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 .problem-card h3 {
     font-size: 1.25rem;
     color: var(--color-white);
