@@ -1297,6 +1297,53 @@ body::before {
     box-shadow: 0 0 34px rgba(255, 215, 0, 0.22);
 }
 
+.testimonials-intro-title {
+    font-family: var(--font-display);
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 34px;
+    background: linear-gradient(135deg, #ffffff 0%, #86efac 35%, #facc15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(134, 239, 172, 0.18);
+    line-height: 1.18;
+}
+
+.testimonials-intro-subtitle {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    text-align: center;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--color-gray-100);
+    text-shadow: 0 0 20px rgba(255,255,255,0.12);
+}
+
+.testimonials-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 56px;
+}
+
+.testimonials-video-card {
+    padding: 14px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(8,18,38,0.95) 0%, rgba(16,27,52,0.9) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.32);
+    backdrop-filter: blur(12px);
+}
+
+.testimonials-video {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    background: #020817;
+    box-shadow: 0 0 28px rgba(0, 212, 255, 0.08);
+}
+
 .testimonials-section .section-title {
     font-size: 4.15rem;
     background: linear-gradient(135deg, #ffffff 0%, #fde68a 40%, #c4b5fd 100%);
@@ -1550,45 +1597,68 @@ body::before {
 }
 
 .business-content .section-badge {
+    padding: 16px 42px;
+    font-size: 1.18rem;
+    letter-spacing: 0.22em;
     margin-bottom: 30px;
+    color: #fff0b3;
+    box-shadow: 0 0 34px rgba(255, 215, 0, 0.28);
+}
+
+.business-section .section-title {
+    font-size: 4.35rem;
+    background: linear-gradient(135deg, #ffffff 0%, #86efac 38%, #7dd3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 28px rgba(134, 239, 172, 0.22);
 }
 
 .business-subtitle {
-    font-size: 1.3rem;
-    color: var(--color-gray-300);
+    font-size: 1.5rem;
+    color: var(--color-gray-200);
+    font-weight: 600;
     margin-bottom: 50px;
+    text-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
 
 .business-benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    gap: 26px;
     margin-bottom: 50px;
 }
 
 .benefit-item {
-    background: var(--gradient-glass);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 30px 24px;
+    background: linear-gradient(180deg, rgba(8,18,38,0.94) 0%, rgba(16,27,52,0.88) 100%);
+    border: 1px solid rgba(0,255,136,0.18);
+    border-radius: 22px;
+    padding: 34px 28px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     align-items: center;
     transition: var(--transition-normal);
+    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
 }
 
 .benefit-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-purple);
+    transform: translateY(-8px);
+    border-color: rgba(0,255,136,0.45);
+    box-shadow: 0 22px 44px rgba(0,255,136,0.12);
 }
 
 .benefit-icon {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 18px rgba(0,255,136,0.18));
 }
 
 .benefit-text {
-    font-weight: 600;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-shadow: 0 0 18px rgba(255,255,255,0.12);
 }
 
 /* ===== FINAL CTA ===== */
@@ -1688,6 +1758,28 @@ body::before {
     
     .section-title {
         font-size: 2rem;
+    }
+
+    .business-section .section-title {
+        font-size: 2.7rem;
+    }
+
+    .testimonials-intro-title {
+        font-size: 2.35rem;
+        margin-bottom: 26px;
+    }
+
+    .testimonials-intro-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    .business-subtitle {
+        font-size: 1.18rem;
+    }
+
+    .benefit-text {
+        font-size: 1.12rem;
     }
     
     .hero-title {
