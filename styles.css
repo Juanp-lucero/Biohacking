@@ -914,6 +914,24 @@ body::before {
 }
 
 /* ===== CREATOR SECTION ===== */
+.creator-section .section-badge {
+    padding: 14px 36px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: #ffe082;
+    box-shadow: 0 0 34px rgba(255, 215, 0, 0.2);
+}
+
+.creator-section .section-title {
+    font-size: 4.1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #facc15 45%, #fb7185 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 28px rgba(250, 204, 21, 0.22);
+}
+
 .creator-content {
     display: flex;
     gap: 80px;
@@ -966,23 +984,28 @@ body::before {
 
 .creator-name {
     font-family: var(--font-display);
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    background: linear-gradient(135deg, var(--color-gold), var(--color-pink));
+    font-size: 3.4rem;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffedd5 0%, #f97316 45%, #ef4444 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 32px rgba(249, 115, 22, 0.22);
 }
 
 .creator-title {
-    font-size: 1.1rem;
-    color: var(--color-gray-400);
-    margin-bottom: 30px;
+    font-size: 1.35rem;
+    color: var(--color-gray-100);
+    font-weight: 700;
+    margin-bottom: 26px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.12);
 }
 
 .creator-bio {
-    font-size: 1.1rem;
-    color: var(--color-gray-300);
+    font-size: 1.22rem;
+    color: var(--color-gray-200);
+    line-height: 1.85;
     margin-bottom: 40px;
 }
 
