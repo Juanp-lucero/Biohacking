@@ -1380,6 +1380,47 @@ body::before {
     box-shadow: 0 0 28px rgba(0, 212, 255, 0.08);
 }
 
+.social-proof-section {
+    padding-top: 24px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,212,255,0.04));
+}
+
+.social-proof-header {
+    margin-bottom: 40px;
+}
+
+.social-proof-section .section-title {
+    font-size: 4rem;
+    background: linear-gradient(135deg, #ffffff 0%, #86efac 34%, #fde68a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(134, 239, 172, 0.18);
+}
+
+.social-proof-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.social-proof-video-card {
+    padding: 14px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(8,18,38,0.95) 0%, rgba(16,27,52,0.9) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.32);
+    backdrop-filter: blur(12px);
+}
+
+.social-proof-video {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    background: #020817;
+    box-shadow: 0 0 28px rgba(0, 212, 255, 0.08);
+}
+
 .testimonials-section .section-title {
     font-size: 4.15rem;
     background: linear-gradient(135deg, #ffffff 0%, #fde68a 40%, #c4b5fd 100%);
@@ -1807,6 +1848,10 @@ body::before {
     .testimonials-intro-title {
         font-size: 2.35rem;
         margin-bottom: 26px;
+    }
+
+    .social-proof-section .section-title {
+        font-size: 2.45rem;
     }
 
     .testimonials-intro-subtitle {
