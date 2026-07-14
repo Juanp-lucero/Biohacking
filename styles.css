@@ -562,6 +562,13 @@ body::before {
     animation: pulse-stress 2s ease-in-out infinite;
 }
 
+.problem-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 @keyframes pulse-stress {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
