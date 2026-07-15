@@ -2276,3 +2276,26 @@ body::before {
         width: 100%;
     }
 }
+
+/* MINIMIZED TOUR STATE */
+.tour-container.minimized .tour-content {
+    display: none;
+}
+
+.tour-mini-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-gold));
+    color: var(--color-dark);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.tour-container.minimized:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

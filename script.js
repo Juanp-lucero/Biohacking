@@ -158,10 +158,9 @@ const tourCloseBtn = document.getElementById('tourCloseBtn');
 
 // Function to start the tour
 function startTour() {
-    if (!localStorage.getItem('tourCompleted')) {
-        showTourStep(0);
-        tourContainer.style.display = 'flex';
-    }
+    showTourStep(0);
+    tourContainer.style.display = 'flex';
+    tourContainer.classList.remove('minimized');
 }
 
 // Function to show a specific tour step
@@ -216,23 +215,29 @@ function clearHighlights() {
     });
 }
 
-// Function to close the tour
-function closeTour() {
-    tourContainer.style.display = 'none';
-    clearHighlights();
-    localStorage.setItem('tourCompleted', 'true');
+// Function to toggle tour minimized/maximized
+function toggleTourMinimized() {
+    tourContainer.classList.toggle('minimized');
+    if (!tourContainer.classList.contains('minimized')) {
+        // If expanding, make sure container is visible
+        tourContainer.style.display = 'flex';
+    }
 }
 
 // Event listeners for tour buttons
 tourPrevBtn.addEventListener('click', () => showTourStep(currentTourStep - 1));
 tourNextBtn.addEventListener('click', () => {
     if (currentTourStep === tourSteps.length - 1) {
-        closeTour();
+        toggleTourMinimized();
     } else {
         showTourStep(currentTourStep + 1);
     }
 });
-tourCloseBtn.addEventListener('click', closeTour);
+tourCloseBtn.addEventListener('click', toggleTourMinimized);
+
+// Event listener to maximize tour when clicking mascot
+const tourMascot = document.getElementById('tourMascot');
+tourMascot.addEventListener('click', toggleTourMinimized);
 
 // Start tour when DOM loads
 document.addEventListener('DOMContentLoaded', startTour);
