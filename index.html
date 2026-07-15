@@ -627,10 +627,10 @@
                         <p class="invitation-text">
                             Solo una oportunidad para que experimentes el cambio por ti mismo.
                         </p>
-                        <button class="btn btn-glow btn-whatsapp btn-lg" onclick="openWhatsApp('vi la invitación para la terapia gratuita y quiero agendar mi sesión')">
-                            <span class="btn-icon">💚</span>
-                            Agendar mi terapia gratuita
-                        </button>
+                        <button class="btn btn-glow btn-whatsapp btn-lg" onclick="openVisitadoresModal()">
+                        <span class="btn-icon">�‍⚕️</span>
+                        Agendar mi terapia gratuita
+                    </button>
                     </div>
                 </div>
             </div>
@@ -719,8 +719,8 @@
                             <div class="benefit-text">Capacitación gratuita</div>
                         </div>
                     </div>
-                    <button class="btn btn-glow btn-primary btn-lg" onclick="openWhatsApp('quiero trabajar con ustedes')">
-                        <span class="btn-icon">🚀</span>
+                    <button class="btn btn-glow btn-primary btn-lg" onclick="openVisitadoresModal()">
+                        <span class="btn-icon">�‍⚕️</span>
                         Quiero ser parte del equipo
                     </button>
                 </div>
@@ -761,6 +761,49 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal de Visitadores Médicos -->
+    <div id="visitadoresModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Visitadores Médicos</h2>
+            <div class="visitadores-grid">
+                <!-- Anderson Jurado -->
+                <div class="visitador-card">
+                    <div class="visitador-foto">
+                        <img src="imagen 1.jpeg" alt="Anderson Jurado" class="visitador-img">
+                    </div>
+                    <h3 class="visitador-nombre">Anderson Jurado</h3>
+                    <a href="https://wa.me/573188037575" target="_blank" class="btn btn-glow btn-whatsapp">
+                        <span class="btn-icon">💚</span>
+                        Contactar
+                    </a>
+                </div>
+                <!-- Galo Vladimir Rosero -->
+                <div class="visitador-card">
+                    <div class="visitador-foto">
+                        <img src="imagen 2.jpeg" alt="Galo Vladimir Rosero" class="visitador-img">
+                    </div>
+                    <h3 class="visitador-nombre">Galo Vladimir Rosero</h3>
+                    <a href="https://wa.me/573016791466" target="_blank" class="btn btn-glow btn-whatsapp">
+                        <span class="btn-icon">💚</span>
+                        Contactar
+                    </a>
+                </div>
+                <!-- Jennyfer Morales Arcos -->
+                <div class="visitador-card">
+                    <div class="visitador-foto">
+                        <img src="WhatsApp Image 2026-07-02 at 9.29.41 PM.jpeg" alt="Jennyfer Morales Arcos" class="visitador-img">
+                    </div>
+                    <h3 class="visitador-nombre">Jennyfer Morales Arcos</h3>
+                    <a href="https://wa.me/573134258879" target="_blank" class="btn btn-glow btn-whatsapp">
+                        <span class="btn-icon">💚</span>
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,17 +1,4 @@
-// ===== CONFIGURACIÓN PRINCIPAL =====
-const WHATSAPP_NUMBER = '573156702081'; // Número de WhatsApp de Colombia
-
-// ===== FUNCIONES PRINCIPALES =====
-
-// Función para abrir WhatsApp con mensaje predefinido
-function openWhatsApp(message) {
-    const baseUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
-    const fullMessage = encodeURIComponent(`Hola, ${message}`);
-    const url = `${baseUrl}?text=${fullMessage}`;
-    window.open(url, '_blank');
-}
-
-// Función para hacer scroll suave a una sección
+// ===== FUNCIONES EXISTENTES =====
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -19,238 +6,108 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Función para abrir/cerrar FAQ
+function openWhatsApp(message) {
+    const phoneNumber = '573000000000'; // Reemplaza con tu número principal si es necesario
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+
 function toggleFaq(element) {
     const faqItem = element.parentElement;
     faqItem.classList.toggle('active');
 }
 
-// ===== ANIMACIONES AVANZADAS =====
+// ===== MODAL DE VISITADORES MÉDICOS =====
+const modal = document.getElementById('visitadoresModal');
+const closeModal = document.querySelector('.close-modal');
 
-// Partículas animadas para el fondo
-function createParticles() {
-    const particlesContainer = document.getElementById('particles');
-    const particleCount = 50;
-    
-    for (let i = 0; i < particleCount; i++) {
-        createParticle(particlesContainer);
+// Función para abrir el modal
+function openVisitadoresModal() {
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
     }
 }
 
-function createParticle(container) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    
-    const size = Math.random() * 6 + 3;
-    const left = Math.random() * 100;
-    const duration = Math.random() * 15 + 8;
-    const delay = Math.random() * 15;
-    
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.left = `${left}%`;
-    particle.style.animation = `float ${duration}s ${delay}s infinite`;
-    particle.style.opacity = Math.random() * 0.6 + 0.3;
-    
-    // Colores más brillantes y variados
-    const colors = ['#00d4ff', '#ffd700', '#8b5cf6', '#00ff88', '#ff6699', '#66ffcc'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.background = randomColor;
-    particle.style.boxShadow = `0 0 ${size * 3}px ${randomColor}, 0 0 ${size * 6}px ${randomColor}40`;
-    
-    container.appendChild(particle);
-}
-
-// Contador animado para las estadísticas
-function animateCounter(element, target) {
-    const duration = 2000;
-    const start = 0;
-    const startTime = performance.now();
-    
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Efecto de easing (salto)
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        const current = Math.floor(easeOut * target);
-        
-        element.textContent = current.toLocaleString();
-        
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            element.textContent = target.toLocaleString();
-        }
+// Función para cerrar el modal
+function closeVisitadoresModal() {
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restaurar scroll
     }
-    
-    requestAnimationFrame(update);
 }
 
-// Observador de intersección para animaciones al hacer scroll
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Animar elementos que aparecen
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                
-                // Animar contadores si los hay
-                const counter = entry.target.querySelector('.stat-number');
-                if (counter && !counter.classList.contains('counted')) {
-                    counter.classList.add('counted');
-                    const target = parseInt(counter.dataset.target);
-                    animateCounter(counter, target);
-                }
-                
-                // Dejar de observar después de animar
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Observar todas las secciones y elementos
-    const animateElements = document.querySelectorAll('.problem-card, .tech-card, .cert-card, .product-card, .testimonial-card, .faq-item, .benefit-item, .video-wrapper');
-    animateElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(el);
-    });
-    
-    // Observar las secciones de estadísticas
-    document.querySelectorAll('.stat-item').forEach(item => {
-        observer.observe(item);
-    });
+// Evento para cerrar el modal con el botón X
+if (closeModal) {
+    closeModal.addEventListener('click', closeVisitadoresModal);
 }
 
-// Animación para la barra de navegación
-function initNavbar() {
-    const navbar = document.querySelector('.navbar');
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(10, 22, 40, 0.95)';
-            navbar.style.backdropFilter = 'blur(20px)';
-            scrollIndicator.style.opacity = '0';
-            scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
-            scrollIndicator.style.pointerEvents = 'none';
-        } else {
-            navbar.style.background = 'rgba(10, 22, 40, 0.8)';
-            scrollIndicator.style.opacity = '1';
-            scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
-            scrollIndicator.style.pointerEvents = 'auto';
+// Evento para cerrar el modal al hacer clic fuera del contenido
+if (modal) {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeVisitadoresModal();
         }
     });
 }
 
-// Efecto 3D para tarjetas
-function initCardEffects() {
-    const cards = document.querySelectorAll('.tech-card, .product-card, .testimonial-card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-    });
-}
-
-// Animación para la invitación
-function initInvitationAnimation() {
-    const invitation = document.querySelector('.invitation-envelope');
-    
-    if (invitation) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transform = 'scale(1)';
-                    entry.target.style.boxShadow = '0 0 60px rgba(255, 215, 0, 0.3)';
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        observer.observe(invitation);
+// Evento para cerrar el modal con la tecla Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+        closeVisitadoresModal();
     }
-}
-
-// Efecto de brillo para botones
-function initButtonEffects() {
-    const buttons = document.querySelectorAll('.btn-glow');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px) scale(1.02)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-}
-
-// ===== INICIALIZACIÓN =====
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Biohacking Website inicializado!');
-    
-    createParticles();
-    initScrollAnimations();
-    initNavbar();
-    initCardEffects();
-    initInvitationAnimation();
-    initButtonEffects();
-    
-    // Pequeño delay para las animaciones iniciales
-    setTimeout(() => {
-        document.querySelectorAll('.stat-number').forEach(counter => {
-            counter.style.opacity = '1';
-        });
-    }, 500);
 });
 
-// ===== KEYFRAMES DINÁMICOS =====
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes float {
-        0% {
-            transform: translateY(100vh) translateX(0px);
-            opacity: 0;
-        }
-        10% {
-            opacity: 0.7;
-        }
-        50% {
-            transform: translateY(50vh) translateX(15px);
-            opacity: 0.9;
-        }
-        90% {
-            opacity: 0.7;
-        }
-        100% {
-            transform: translateY(-100px) translateX(-10px);
-            opacity: 0;
-        }
+// ===== ANIMACIÓN DE ESTADÍSTICAS DEL HERO =====
+function animateStats() {
+    const stats = document.querySelectorAll('.stat-number');
+    stats.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const duration = 2000; // 2 segundos
+        const increment = target / (duration / 16); // 60 FPS
+        let current = 0;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                stat.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                stat.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
+}
+
+// Ejecutar animación de stats cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    // Animar stats después de un pequeño delay
+    setTimeout(animateStats, 500);
+});
+
+// ===== PARTICLES BACKGROUND =====
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+
+    const colors = ['#00d4ff', '#ffd700', '#ff4444', '#8b5cf6', '#00ff88'];
+    const particleCount = 50;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.width = `${Math.random() * 4 + 2}px`;
+        particle.style.height = particle.style.width;
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.animationDelay = `${Math.random() * 15}s`;
+        particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+        particlesContainer.appendChild(particle);
     }
-`;
-document.head.appendChild(style);
+}
+
+// Crear partículas cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', createParticles);
