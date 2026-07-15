@@ -2090,14 +2090,101 @@ body::before {
     .modal-content {
         margin: 10% auto;
         padding: 30px 20px;
+        width: 95%;
     }
 
     .modal-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .visitador-foto {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .visitador-nombre {
+        font-size: 1.1rem;
+    }
+
+    /* Navbar responsive */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero responsive */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-divider {
+        width: 80px;
+        height: 1px;
+    }
+
+    /* Section titles responsive */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Products grid responsive */
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Comparison grid responsive */
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Creator content responsive */
+    .creator-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .creator-name {
+        font-size: 2rem;
+    }
+
+    /* Testimonials intro responsive */
+    .testimonials-intro-title {
+        font-size: 2rem;
+    }
+
+    .testimonials-intro-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Buttons responsive */
+    .btn-lg {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .visitador-card {
+        padding: 20px;
     }
 }
